@@ -7,9 +7,10 @@ function comprar() {
 
     if (isNaN(qtd) || qtd <= 0) {
         alert('Por favor, insira uma quantidade válida.');
+        document.getElementById('qtd').value = '';
         return;
     }
-    
+
     //diminuir quantidade disponível com base na quantidade comprada
     if (tipoIngresso == 'pista') {
         comprarPista(qtd);
